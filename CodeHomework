@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Homework1 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double a, b, c, d, x1, x2;
+        System.out.println("Введите переменные квадратного уравнения (a,b,c)");
+        System.out.print("a= ");
+        a = in.nextDouble();
+        System.out.print("b= ");
+        b = in.nextDouble();
+        System.out.print("c= ");
+        c = in.nextDouble();
+        d = b * b - 4 * a * c;
+        if (d > 0) {
+            x1 = (-b - Math.sqrt(d)) / (a * 2);
+            x2 = (-b + Math.sqrt(d)) / (a * 2);
+            System.out.println("Корни квадратного уравнения: x1= " + x1 + ", x2 = " + x2);
+        } else if (d == 0) {
+            double x;
+            x = -b / (2 * a);
+            System.out.println("Уравнение имеет корень: x = " + x);
+        } else {
+            System.out.println("Уравнение не имеет корней");
+        }
+    }
+}
